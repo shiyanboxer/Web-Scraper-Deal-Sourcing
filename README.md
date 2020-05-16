@@ -1,5 +1,3 @@
-README.md
-
 # Web Scraper Deal Sourcing
 Source businesses' contact information for [Studio 50-50](https://studio50-50.com/) deal sourcing. Contacts are stored in an Excel sheet. Build using Python with Selenium, BeautifulSoup, pandas libraries, Google Chrome browser, and Ubuntu Operating System.
 
