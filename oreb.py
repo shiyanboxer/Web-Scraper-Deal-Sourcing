@@ -15,7 +15,7 @@ csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 # *** SOURCE INFO ***
 # for contact in soup.find_all('contact')
 
-print(soup).text
+# print(soup)
 
 """
 for article in soup.find_all('article'):
@@ -53,5 +53,4 @@ for article in soup.find_all('article'):
 
 # outside of the loop, close the file
 csv_file.close()
-
 """
