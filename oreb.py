@@ -13,10 +13,10 @@ csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
 # *** SOURCE INFO ***
-""" 
-for loop that iterates over all articles in the page
-article in this case contains the heading, description, and video link
-use for loop and find_all method to iterate get all articles content in the page
+# for contact in soup.find_all('contact')
+
+print(soup).text
+
 """
 for article in soup.find_all('article'):
     headline = article.h2.a.text
@@ -53,3 +53,5 @@ for article in soup.find_all('article'):
 
 # outside of the loop, close the file
 csv_file.close()
+
+"""
