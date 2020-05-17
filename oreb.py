@@ -3,35 +3,14 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 
-"""
-OPEN HTML FILE - read in and pass in html file using lxml parser
-    with open('sample.html') as html_file: 
-        # soup variable which is a BeautifulSoup object of our parsed html
-        soup = BeautifulSoup(html_file, 'lxml') 
-
-        # EXAMPLE OF RETRIEVING TEXT
-        article = soup.find('div', class_='article')
-        headline = article.h2.a.text
-        summary = article.p.text
-
-        # PRINT ENTIRE FORMATED HTML PAGE
-        print(soup.prettify())
-"""
-
-# OPEN FILE FROM WEB USING REQUEST
-# this will return a response object, and with the .text it will return an html equivalent 
-source = requests.get('http://coreyms.com').text
-
-# soup variable which is a BeautifulSoup object of our parsed html
+# *** OPEN FILE FROM WEB USING REQUEST ***
+source = requests.get('https://www.oreb.ca/find-a-realtor/residential-result/').text
 soup = BeautifulSoup(source, 'lxml')
 
-# CSV FILE
-# create a file and 'w', write to it
-csv_file = open('test.csv', 'w')
-# create an object, csv_writter
+# *** CSV FILE ***
+csv_file = open('oreb.csv', 'w')
 csv_writer = csv.writer(csv_file)
-# use writerow method to write row and pass in headers 
-csv_writer.writerow(['headline', 'summary', 'video_link'])
+csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
 # *** SOURCE INFO ***
 """ 
