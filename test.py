@@ -60,7 +60,7 @@ for article in soup.find_all('article'):
         # f string to format the string
         yt_link = f'https://youtube.com/watch?v={vid_id}'
     
-    # *** ERROR MANAGEMENT ***
+    # *** ERRORS ***
     # in case there is missing content, use try except block 
     except Exception as e:
         # copy paste everything in the youtube link block

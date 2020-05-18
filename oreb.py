@@ -1,7 +1,11 @@
+# https://www.oreb.ca/find-a-realtor/residential-result/
+
 # *** IMPORT LIBRARIES ***
 from bs4 import BeautifulSoup
 import requests
 import csv
+import pandas
+import selenium
 
 # *** OPEN FILE FROM WEB USING REQUEST ***
 source = requests.get('https://www.oreb.ca/find-a-realtor/residential-result/').text
@@ -12,45 +16,48 @@ csv_file = open('oreb.csv', 'w')
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
-# *** SOURCE INFO ***
-# for contact in soup.find_all('contact')
+# *** ENTER THE ENTIRE BLOCK ***
+entireblock = soup.find('div', 'listing-section')
 
-# print(soup)
+for contactblock in entireblock.find_all('listing-grid'):
+# contactblock = entireblock.find('div', 'listing-grid')
+    # *** SOURCE INFO ***
+    # TOP - name and phone
+    top = contactblock.find('div', 'top')
+    name = top.find('div', 'top-box').h5.text
+    phone = top.find('div', 'bottom-box').h5.text
+    print(name)
+    print(phone)
 
-"""
-for article in soup.find_all('article'):
-    headline = article.h2.a.text
-    print(headline)
-    
-    # find method finds searches for a  div of specific class
-    # by adding p.text we get the content, if we didn't we would get the html
-    summary = article.find('div', class_='entry-content').p.text
-    print(summary)
+    # MIDDLE - address, company, website, email
+    # MIDDLE LEFT
+    middle = contactblock.find('div', class_='middle')
+    middleleft = middle.find('div', class_='left')
+    company = middleleft.find('div', class_='h5')
+    address = middleleft.find('div', class_='h6')
+    print(company)
+    print(address)
 
-    # geting the link, the link is in an iframe under source
-    try:
-        # returns video link
-        vid_src = article.find('iframe', class_='youtube-player')['src'] # access source attribute
+# MIDDLE RIGHT - email and website links
+middleright = middle.find('div', class_='right')
 
-        # use the split method to split the url based on values
-        vid_id = vid_src.split('/')[4] # get the 4th index
-        vid_id = vid_id.split('?')[0]
+try:
+    website = middleright.a['href']
 
-        # f string to format the string
-        yt_link = f'https://youtube.com/watch?v={vid_id}'
-    
-    # *** ERROR MANAGEMENT ***
-    # in case there is missing content, use try except block 
-    except Exception as e:
-        # copy paste everything in the youtube link block
-        yt_link = None # could not get youtube link so set to none
-    print(yt_link) 
-    print() # black line
+except Exception as e:
+    website = None
 
-    # *** WRITE AND CLOSE CSV ***
-    # write the data to CSV for every iteration
-    csv_writer.writerow([headline, summary, yt_link])
+try:
+    email = middleright.a['href']
+except Exception as e:
+    email = None
 
-# outside of the loop, close the file
+print(website)
+print(email)
+print()
+
+    # *** WRITE CSV ***
+    csv_writer.writerow[name, company, website, email, phone, address]
+
+# *** CLOSE CSV ***
 csv_file.close()
-"""
