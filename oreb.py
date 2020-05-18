@@ -12,7 +12,7 @@ source = requests.get('https://www.oreb.ca/find-a-realtor/residential-result/').
 soup = BeautifulSoup(source, 'lxml')
 
 # *** CSV FILE ***
-csv_file = open('oreb.csv', 'w')
+csv_file = open('real.csv', 'w')
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
@@ -38,26 +38,26 @@ for contactblock in entireblock.find_all('listing-grid'):
     print(company)
     print(address)
 
-# MIDDLE RIGHT - email and website links
-middleright = middle.find('div', class_='right')
+    # MIDDLE RIGHT - email and website links
+    middleright = middle.find('div', class_='right')
 
-try:
-    website = middleright.a['href']
+    try:
+        website = middleright.a['href']
 
-except Exception as e:
-    website = None
+    except Exception as e:
+        website = None
 
-try:
-    email = middleright.a['href']
-except Exception as e:
-    email = None
+    try:
+        email = middleright.a['href']
+    except Exception as e:
+        email = None
 
-print(website)
-print(email)
-print()
+    print(website)
+    print(email)
+    print()
 
     # *** WRITE CSV ***
     csv_writer.writerow[name, company, website, email, phone, address]
 
 # *** CLOSE CSV ***
-csv_file.close()
+# csv_file.close()

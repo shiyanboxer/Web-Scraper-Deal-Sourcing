@@ -8,7 +8,7 @@ import pandas
 import selenium
 
 # *** OPEN FILE FROM WEB USING REQUEST ***
-source = requests.get('https://www.oreb.ca/find-a-realtor/residential-result/').text
+source = requests.get('https://business.ottawabot.ca/list/ql/re-construction-development-12').text
 soup = BeautifulSoup(source, 'lxml')
 
 # *** CSV FILE ***
@@ -17,7 +17,7 @@ csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
 # *** ENTER THE ENTIRE BLOCK ***
-entireblock = soup.find('div', 'listing-section')
+entireblock = soup.find('div', 'row gz-cards gz-results-cards')
 
 for contactblock in entireblock.find_all('listing-grid'):
 # contactblock = entireblock.find('div', 'listing-grid')
