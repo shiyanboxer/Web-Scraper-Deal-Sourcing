@@ -17,6 +17,17 @@ To extract data using web scraping with python, you need to follow these basic s
 - **Pandas**: Pandas is a library used for data manipulation and analysis. It is used to extract the data and store it in the desired format.
 - **Requests**: The requests module allows you to send HTTP requests using Python. The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
 
+### Contact Info
+- Name
+- Company
+- Website
+- Email
+- Phone
+- Address
+
+### Website
+https://business.ottawabot.ca/list
+
 ## Real Estate Websites
 - https://www.point2homes.com/CA/Real-Estate-Agents/ON/Ottawa.html
 - https://business.ottawabot.ca/list/ql/re-construction-development-12
