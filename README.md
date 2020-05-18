@@ -1,5 +1,5 @@
 # Web Scraper for Deal Sourcing
-I built a web scraper to source businesses' contact information for [Studio 50-50](https://studio50-50.com/)'s marketing outreach. Contacts are scraped from the web and stored in an Excel sheet. This program was built using Python, BeautifulSoup, requests, and Chrome Dev Tools.
+I built a web scraper to source businesses' contact information for [Studio 50-50](https://studio50-50.com/)'s marketing outreach. Contacts are scraped from the web and stored in an Excel sheet. This program was built using Python, BeautifulSoup, Pandas, Requests, and Chrome Dev Tools.
 
 ## How It Works
 When you run the code for web scraping, a request is sent to the URL that you have mentioned. As a response to the request, the server sends the data and allows you to read the HTML or XML page. The code then, parses the HTML or XML page, finds the data and extracts it.
