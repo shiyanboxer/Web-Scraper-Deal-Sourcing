@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 import pandas
-import selenium
 
 # *** OPEN FILE FROM WEB USING REQUEST ***
 source = requests.get('https://business.ottawabot.ca/list/ql/re-construction-development-12').text
@@ -18,7 +17,7 @@ csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
 # *** ENTER THE ENTIRE BLOCK ***
 entireblock = soup.find('div', 'row gz-cards gz-results-cards')
-
+innerblock = entireblock.find('div', class_='gz-list-card-wrapper col-sm-6 col-md-4')
 for contactblock in entireblock.find_all('listing-grid'):
 # contactblock = entireblock.find('div', 'listing-grid')
     # *** SOURCE INFO ***

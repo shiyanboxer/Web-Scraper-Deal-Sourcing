@@ -1,5 +1,5 @@
 # Web Scraper for Deal Sourcing
-I built a web scraper to source businesses' contact information for [Studio 50-50](https://studio50-50.com/) marketing outreach. Contacts are scraped from the web and stored in an Excel sheet. This program was built using Python with Selenium, BeautifulSoup pandas libraries, and Chrome Dev Tools.
+I built a web scraper to source businesses' contact information for [Studio 50-50](https://studio50-50.com/)'s marketing outreach. Contacts are scraped from the web and stored in an Excel sheet. This program was built using Python, BeautifulSoup, requests, and Chrome Dev Tools.
 
 ## How It Works
 When you run the code for web scraping, a request is sent to the URL that you have mentioned. As a response to the request, the server sends the data and allows you to read the HTML or XML page. The code then, parses the HTML or XML page, finds the data and extracts it.
@@ -16,7 +16,6 @@ To extract data using web scraping with python, you need to follow these basic s
 - **BeautifulSoup**: Beautiful Soup is a Python package for parsing HTML and XML documents. It creates parse trees that is helpful to extract the data easily.
 - **Pandas**: Pandas is a library used for data manipulation and analysis. It is used to extract the data and store it in the desired format.
 - **Requests**: The requests module allows you to send HTTP requests using Python. The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
-- **Selenium**: Selenium is a web testing library. It is used to automate browser activities.
 
 ## Real Estate Websites
 - https://www.point2homes.com/CA/Real-Estate-Agents/ON/Ottawa.html
