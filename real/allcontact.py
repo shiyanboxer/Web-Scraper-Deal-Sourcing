@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 import pandas as pd
+import numpy as np
 from selenium import webdriver
 
 # *** OPEN FILE FROM WEB USING REQUEST ***
