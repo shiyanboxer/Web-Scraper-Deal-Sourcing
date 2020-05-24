@@ -13,7 +13,7 @@ source = requests.get('https://business.ottawabot.ca/list/ql/re-construction-dev
 soup = BeautifulSoup(source, 'lxml')
 
 # *** CSV FILE ***
-csv_file = open('allcontact.csv', 'w')
+csv_file = open('contactinfo.csv', 'w')
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
