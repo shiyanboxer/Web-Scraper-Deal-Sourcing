@@ -31,10 +31,8 @@ To extract data using web scraping with python, you need to follow these basic s
 - Phone
 - Address
 
-### Website
-https://business.ottawabot.ca/list
-
-## Real Estate Websites
+## Website
+- https://business.ottawabot.ca/list
 - https://www.point2homes.com/CA/Real-Estate-Agents/ON/Ottawa.html
 - https://business.ottawabot.ca/list/ql/re-construction-development-12
 - https://www.oreb.ca/find-a-realtor/residential-result/
