@@ -14,7 +14,8 @@ To extract data using web scraping with python, you need to follow these basic s
 
 ## Folders and Files
 - The "**real**" folder contains the current working version of the web scraping program
-- contactinfo.py enters each contact page on the homepage and extracts the information 
+- contactinfo.py enters each contact page on the homepage and extracts the information
+- contacinfo.csv where contact info is stored
 - The "**test**" folder contains web scraping test files
 
 ## Tools and Tech

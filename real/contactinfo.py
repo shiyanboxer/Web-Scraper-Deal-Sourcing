@@ -45,27 +45,7 @@ print(phone)
 
 # NAME
 
-""" 
-soup.title
-# <title>Returns title tags and the content between the tags</title>
-soup.title.string
-# u'Returns the content inside a title tag as a string'
-soup.p
-# <p class="title"><b>This returns everything inside the paragraph tag</b></p>
-soup.p['class']
-# u'className' (this returns the class name of the element)
-soup.a
-# <a class="link" href="http://example.com/example" id="link1">This would return the first matching anchor tag</a>
-// Or, we could use the find all, and return all the matching anchor tags
-soup.find_all('a')
-# [<a class="link" href="http://example.com/example1" id="link1">link2</a>,
-#  <a class="link" href="http://example.com/example2" id="link2">like3</a>,
-#  <a class="link" href="http://example.com/example3" id="link3">Link1</a>]
-soup.find(id="link3")
-# <a class="link" href="http://example.com/example3" id="link3">This returns just the matching element by ID</a>
-
-
-
+"""
 for contactblock in entireblock.find_all('listing-grid'):
 # contactblock = entireblock.find('div', 'listing-grid')
     # *** SOURCE INFO ***
