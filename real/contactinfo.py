@@ -17,6 +17,10 @@ csv_file = open('contactinfo.csv', 'w')
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
+# FOR LOOP TO ENTER EACH CONTACT PAGE
+# for contact in contacts:
+
+
 
 # *** CONTACT BLOCK ***
 containers = soup.find('div', {'class': 'gz-list-card-wrapper col-sm-6 col-md-4'})
