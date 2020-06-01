@@ -18,9 +18,12 @@ csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Name', 'Company', 'Website', 'Email', 'Phone', 'Address'])
 
 # FOR LOOP TO ENTER EACH CONTACT PAGE
-# for contact in contacts:
+for cont in containers:
+    cont = soup.find('div', {'class': 'gz-list-card-wrapper col-sm-6 col-md-4 col-lg-3'})
+    link = cont.find('a')['href']
+    print(link)
 
-
+"""
 
 # *** CONTACT BLOCK ***
 containers = soup.find('div', {'class': 'gz-list-card-wrapper col-sm-6 col-md-4'})
@@ -50,6 +53,8 @@ print(phone)
 # NAME
 
 """
+"""
+
 for contactblock in entireblock.find_all('listing-grid'):
 # contactblock = entireblock.find('div', 'listing-grid')
     # *** SOURCE INFO ***
