@@ -5,8 +5,6 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 import pandas as pd
-from selenium import webdriver
-
 
 # *** OPEN FILE FROM WEB USING REQUEST ***
 source = requests.get('https://business.ottawabot.ca/list/ql/re-construction-development-12').text
