@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 import pandas
-import selenium
 
 # *** OPEN FILE FROM WEB USING REQUEST ***
 source = requests.get('https://www.oreb.ca/find-a-realtor/residential-result/').text
