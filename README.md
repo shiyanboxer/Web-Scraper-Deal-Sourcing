@@ -4,6 +4,7 @@ I built a web scraper to source businesses' contact information for [Studio 50-5
 ### How It Works
 When you run the code for web scraping, a request is sent to the URL that you have mentioned. As a response to the request, the server sends the data and allows you to read the HTML or XML page. The code then, parses the HTML or XML page, finds the data and extracts it.
 
+
 To extract data using web scraping with python, you need to follow these basic steps:
 1. Find the URL that you want to scrape
 2. Inspecting the Page
